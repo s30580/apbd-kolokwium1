@@ -28,6 +28,10 @@ public class BookingsController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostBooking([FromBody] POSTBookingDTO booking)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
         if (await _book.BookingExists(booking.bookingId))
         {
             return BadRequest($"Booking with ID:{booking.bookingId} already exists");

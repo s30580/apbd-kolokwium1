@@ -1,4 +1,6 @@
-﻿namespace kolos1.Models;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace kolos1.Models;
 
 public class POSTBookingDTO
 {

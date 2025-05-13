@@ -157,6 +157,5 @@ public class Book: IBook
             await transaction.RollbackAsync();
             throw e;
         }
-
     }
 }
